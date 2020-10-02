@@ -3,6 +3,12 @@ import logging
 from aiogram import types, Dispatcher, Bot, executor
 import keyboards as kb
 
+TOKEN = os.getenv('TOKEN', '')  # Press "Reveal Config Vars" in settings tab on Heroku and set TOKEN variable
+
+WEBHOOK_HOST = f'https://orientation-bot.herokuapp.com/'  # Enter here your link from Heroku project settings
+WEBHOOK_URL_PATH = '/webhook/' + TOKEN
+WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_URL_PATH)
+
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
 Message = types.message
