@@ -9,7 +9,7 @@ WEBHOOK_HOST = f'https://orientation-bot.herokuapp.com/'  # Enter here your link
 WEBHOOK_URL_PATH = '/webhook/' + TOKEN
 WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_URL_PATH)
 
-bot = Bot(token=BOT_TOKEN)
+bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 Message = types.message
 
